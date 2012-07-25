@@ -7,6 +7,11 @@ gem 'rails', '3.1.0'
 
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
+  gem 'simplecov', :require => false, :group => :test
+  gem 'ruby-tmdb'
+  gem 'rspec-rails'
+  gem 'ZenTest'
+  gem 'factory_girl_rails'
   gem 'sqlite3'
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'cucumber-rails'
@@ -16,7 +21,7 @@ group :development, :test do
   gem 'launchy'
 end
 group :production do
-#  gem 'pg'
+ gem 'pg'
 end
 
 # Gems used only for assets and not required
